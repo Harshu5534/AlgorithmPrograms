@@ -5,7 +5,7 @@ class Program
     {
         Console.WriteLine("Welcome To Algorithm Programs");
         bool end = true;
-        Console.WriteLine("1.BinarySearch\n2.End the Program");
+        Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.End the Program");
         while (end == true)
         {
             Console.WriteLine("Take an option to execute");
@@ -17,6 +17,10 @@ class Program
                     binarySearch.Binary();
                     break;
                 case 2:
+                    BubbleSort sort= new BubbleSort();
+                    sort.Bubble();
+                    break;
+                case 3:
                     end = false;
                     break;
                 default:
