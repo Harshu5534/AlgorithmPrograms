@@ -5,7 +5,7 @@ class Program
     {
         Console.WriteLine("Welcome To Algorithm Programs");
         bool end = true;
-        Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.CheckAnagramOrNot\n4.InsertionSort\n5.End the Program");
+        Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.CheckAnagramOrNot\n4.InsertionSort\n5.PrimeNumber\n6.End the Program");
         while (end == true)
         {
             Console.WriteLine("\nTake an option to execute ");
@@ -29,6 +29,10 @@ class Program
                     insertionsort.Insertion();
                     break;
                 case 5:
+                    PrimeNumber number= new PrimeNumber();
+                    number.PrimeNumberWithinRange();
+                    break;
+                case 6:
                     end = false;
                     break;
                 default:
