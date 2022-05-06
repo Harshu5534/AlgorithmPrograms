@@ -5,7 +5,7 @@ class Program
     {
         Console.WriteLine("Welcome To Algorithm Programs");
         bool end = true;
-        Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.CheckAnagramOrNot\n4.End the Program");
+        Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.CheckAnagramOrNot\n4.InsertionSort\n5.End the Program");
         while (end == true)
         {
             Console.WriteLine("Take an option to execute");
@@ -25,6 +25,10 @@ class Program
                     anagram.AnagramOrNot();
                     break;
                 case 4:
+                    InsertionSort insertionsort= new InsertionSort();
+                    insertionsort.Insertion();
+                    break;
+                case 5:
                     end = false;
                     break;
                 default:
