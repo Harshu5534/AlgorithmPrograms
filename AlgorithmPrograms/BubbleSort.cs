@@ -27,7 +27,7 @@ namespace AlgorithmPrograms
             Console.WriteLine("After Sorting Array");
             for (int i=0;i<arr.Length;i++)
             {
-               Console.Write("{0},\n",arr[i]);
+               Console.Write("{0} ",arr[i]);
             }
         }
     }

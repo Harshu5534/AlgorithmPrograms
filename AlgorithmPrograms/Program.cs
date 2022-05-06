@@ -8,7 +8,7 @@ class Program
         Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.CheckAnagramOrNot\n4.InsertionSort\n5.End the Program");
         while (end == true)
         {
-            Console.WriteLine("Take an option to execute");
+            Console.WriteLine("\nTake an option to execute ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
