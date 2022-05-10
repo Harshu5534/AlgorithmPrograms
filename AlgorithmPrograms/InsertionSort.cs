@@ -13,14 +13,14 @@ namespace AlgorithmPrograms
             int[] a = new int[6] { 4, 5, 6, 1, 3, 8 };
             int cnt = a.Length;
             int key;
-            for(int i = 0; i < cnt; i++)
+            for(int i = 1; i < cnt; i++)
             {
                 key= a[i];
                 int j = i - 1;
                 while (j >= 0 && a[j] > key)
                 {
                     a[j + 1] = a[j];
-                    j = j - 1;
+                    j --;
                 }
                 a[j + 1] = key;
             }

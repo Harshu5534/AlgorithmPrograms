@@ -5,7 +5,7 @@ class Program
     {
         Console.WriteLine("Welcome To Algorithm Programs");
         bool end = true;
-        Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.CheckAnagramOrNot\n4.InsertionSort\n5.PrimeNumber\n6.PrimePalindromeAnagram\n7.End the Program");
+        Console.WriteLine("1.BinarySearch\n2.BubbleSort\n3.CheckAnagramOrNot\n4.InsertionSort\n5.PrimeNumber\n6.PrimePalindromeAnagram\n7.GuessNumber\n8.End the Program");
         while (end == true)
         {
             Console.WriteLine("\nTake an option to execute ");
@@ -37,6 +37,11 @@ class Program
                     primePalindrome.PrimePalindromNumber();
                     break;
                 case 7:
+                    GuessGame game = new GuessGame();
+                    Console.WriteLine("Guess a number between 0 to 127");
+                    Console.WriteLine("Guessed no is :" + game.Find());
+                    break;
+                case 8:
                     end = false;
                     break;
                 default:
