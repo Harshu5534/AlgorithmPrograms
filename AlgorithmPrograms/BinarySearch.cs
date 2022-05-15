@@ -9,28 +9,25 @@ namespace AlgorithmPrograms
 {
     public class BinarySearch
     {
-        public void Binary()
+        public int Binary(string[] array, int firstElement, int lastElement, string key)
         {
-            bool check = false;
-            const string Data_filepath= @"E:\VisualPractise\AlgorithmPrograms\AlgorithmPrograms\Data.txt";
-            string list=File.ReadAllText(Data_filepath);
-            string[] arr = list.Split(" ");
-            Console.WriteLine("Enter The Word");
-            string name = Console.ReadLine();
-            foreach (string word in arr)
+            while (lastElement >= firstElement)
             {
-                if (word.Equals(name))
+                int mid = firstElement + (lastElement - firstElement) / 2;
+                int res = key.CompareTo(array[mid]);
+                if (res == 0) // Check if key is present at mid
+                    return mid;
+                if (res > 0) // If key greater, ignore left half
                 {
-                    check = true;
-                    Console.WriteLine("Word Is Exist");
+                    firstElement = mid + 1;
                 }
-                
+                // If key is smaller, ignore right half
+                if (res < 0)
+                {
+                    lastElement = mid - 1;
+                }
             }
-            if(check==false)
-            {
-                Console.WriteLine("Word Is not Exist");
-            }
-            
+            return -1;
         }
     }
 }
